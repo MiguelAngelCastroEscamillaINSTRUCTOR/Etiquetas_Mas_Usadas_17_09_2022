@@ -10,60 +10,42 @@
 </head>
 
 <body>
-    <!-- lista desordenada -->
-    <ul>
-        <li>Miguel</li>
-        <li>Leonel</li>
-        <li>Diana</li>
-    </ul>
+    <!-- tablas -->
+    <table border="solid">
+        <caption>Tabla de datos</caption>
+        <thead>
+            <tr>
+                <th>A</th>
+                <th>B</th>
+                <th>C</th>
+                <th>D</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td rowspan="2">Miguel</td>
+                <td>Diana</td>
+                <td>Hernan</td>
+                <td>Leon</td>
+            </tr>
+            <tr>
+                <td colspan="2">kdjfh</td>
+                <td>kdjfh</td>
+            </tr>
+            <tr>
+                <td>kdjfh</td>
+                <td>kdjfh</td>
+                <td colspan="2">kdjfh</td>
+            </tr>
+            <tr>
+                <td>hgjh</td>
+                <td>kdjfh</td>
+                <td>kdjfh</td>
+                <td>kdjfh</td>
+            </tr>
+        </tbody>
+    </table>
 
-    <!-- listas ordenada -->
-    <ol>
-        <li>Lecha</li>
-        <li>Pan</li>
-        <li>Papas</li>
-        <li>Crema peinar</li>
-    </ol>
-
-
-    <!-- listas ordenada con sus hijos ordenados -->
-    <ol id="lista">
-        <li>Lacteos</li>
-        <ol>
-            <li>Queso</li>
-            <li>Yogur</li>
-        </ol>
-        <li>Mercado</li>
-        <ol>
-            <li>Papas</li>
-            <li>Yuca</li>
-        </ol>
-        <li>Chuches</li>
-        <ol>
-            <li>Papitas fritas</li>
-            <li>Galletas oreos</li>
-        </ol>
-    </ol>
-    <script>
-        let num=0;
-        let padre = document.querySelector("#lista").children;
-        for (let i = 0; i < padre.length; i++) {
-            if (i % 2 == 0) {
-                num++;
-            } else {
-                for (let id of padre[i].children) {
-                    id.innerHTML = `<span>${num}</span> ${id.innerHTML}`
-                }
-            }
-        }
-    </script>
-
-    <!-- listas descriptivas -->
-    <dl>
-        <dt>Lacteos</dt>
-        <dd>Queso</dd>
-        <dd>Yogur</dd>
-    </dl>
 
 </body>
 
