@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="sp">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,13 +8,63 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <!-- titulos -->
-    <h1>Titulo 1</h1>
-    <h2>Titulo 2</h2>
-    <h3>Titulo 3</h3>
-    <h4>Titulo 4</h4>
-    <h5>Titulo 5</h5>
-    <h6>Titulo 6</h6>
+    <!-- lista desordenada -->
+    <ul>
+        <li>Miguel</li>
+        <li>Leonel</li>
+        <li>Diana</li>
+    </ul>
+
+    <!-- listas ordenada -->
+    <ol>
+        <li>Lecha</li>
+        <li>Pan</li>
+        <li>Papas</li>
+        <li>Crema peinar</li>
+    </ol>
+
+
+    <!-- listas ordenada con sus hijos ordenados -->
+    <ol id="lista">
+        <li>Lacteos</li>
+        <ol>
+            <li>Queso</li>
+            <li>Yogur</li>
+        </ol>
+        <li>Mercado</li>
+        <ol>
+            <li>Papas</li>
+            <li>Yuca</li>
+        </ol>
+        <li>Chuches</li>
+        <ol>
+            <li>Papitas fritas</li>
+            <li>Galletas oreos</li>
+        </ol>
+    </ol>
+    <script>
+        let num=0;
+        let padre = document.querySelector("#lista").children;
+        for (let i = 0; i < padre.length; i++) {
+            if (i % 2 == 0) {
+                num++;
+            } else {
+                for (let id of padre[i].children) {
+                    id.innerHTML = `<span>${num}</span> ${id.innerHTML}`
+                }
+            }
+        }
+    </script>
+
+    <!-- listas descriptivas -->
+    <dl>
+        <dt>Lacteos</dt>
+        <dd>Queso</dd>
+        <dd>Yogur</dd>
+    </dl>
+
 </body>
+
 </html>

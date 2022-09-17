@@ -1,0 +1,11 @@
+span{
+    position: absolute;
+    left: 60px;
+}
+
+/* dt::before{
+    content: "►";
+}
+dd::before{
+    content: "*";
+} */
